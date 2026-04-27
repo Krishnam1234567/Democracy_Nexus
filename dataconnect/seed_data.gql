@@ -1,0 +1,95 @@
+mutation SeedData @transaction @auth(level: USER, insecureReason: "Seed data operations are administrative and should only be performed by authenticated users.") {
+  user_insertMany(data: [
+    {
+      id: "10000000-0000-4000-8000-000000000001",
+      displayName: "Alice",
+      email: "alice@example.com",
+      createdAt: "2023-01-01T10:00:00Z",
+      registeredToVote: true
+    },
+    {
+      id: "10000000-0000-4000-8000-000000000002",
+      displayName: "Bob",
+      email: "bob@example.com",
+      createdAt: "2023-01-01T10:05:00Z",
+      registeredToVote: false
+    }
+  ])
+  election_insertMany(data: [
+    {
+      id: "20000000-0000-4000-8000-000000000001",
+      name: "Local Council Election",
+      electionDate: "2024-11-05",
+      jurisdiction: "Springfield",
+      createdAt: "2023-05-15T08:00:00Z",
+      isCompleted: false,
+      description: "Election for the local city council members.",
+    },
+    {
+      id: "20000000-0000-4000-8000-000000000002",
+      name: "State Governor Election",
+      electionDate: "2024-11-05",
+      jurisdiction: "State of Euphoria",
+      createdAt: "2023-06-20T09:30:00Z",
+      isCompleted: false,
+      description: "Election for the Governor of the State of Euphoria.",
+    }
+  ])
+  candidate_insertMany(data: [
+    {
+      id: "30000000-0000-4000-8000-000000000001",
+      firstName: "Carol",
+      lastName: "Danvers",
+      partyAffiliation: "Independent",
+      createdAt: "2023-07-01T12:00:00Z",
+      electionId: "20000000-0000-4000-8000-000000000001",
+      biography: "Experienced community leader.",
+      website: "https://caroldanvers.org"
+    },
+    {
+      id: "30000000-0000-4000-8000-000000000002",
+      firstName: "David",
+      lastName: "Banner",
+      partyAffiliation: "Green Party",
+      createdAt: "2023-07-02T13:00:00Z",
+      electionId: "20000000-0000-4000-8000-000000000002",
+      biography: "Advocate for environmental protection.",
+      website: "https://davidbanner.com"
+    }
+  ])
+  issue_insertMany(data: [
+    {
+      id: "40000000-0000-4000-8000-000000000001",
+      name: "Public Transportation",
+      createdAt: "2023-08-01T14:00:00Z",
+      description: "Improving bus and train services."
+    },
+    {
+      id: "40000000-0000-4000-8000-000000000002",
+      name: "Affordable Housing",
+      createdAt: "2023-08-05T15:00:00Z",
+      description: "Plans to increase availability of affordable homes."
+    }
+  ])
+  candidateStance_insertMany(data: [
+    {
+      candidateId: "30000000-0000-4000-8000-000000000001",
+      issueId: "40000000-0000-4000-8000-000000000001",
+      stanceDescription: "Supports expanding current public transportation routes.",
+      sourceLink: "https://caroldanvers.org/transport"
+    },
+    {
+      candidateId: "30000000-0000-4000-8000-000000000002",
+      issueId: "40000000-0000-4000-8000-000000000002",
+      stanceDescription: "Proposes new zoning laws to encourage affordable housing development.",
+      sourceLink: "https://davidbanner.com/housing"
+    }
+  ])
+  watchlist_insertMany(data: [
+    {
+      userId: "10000000-0000-4000-8000-000000000001",
+      electionId: "20000000-0000-4000-8000-000000000001",
+      addedAt: "2023-09-01T16:00:00Z"
+    }
+  ])
+}

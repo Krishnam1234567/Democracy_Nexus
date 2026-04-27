@@ -1,0 +1,180 @@
+{
+  "glossary": [
+    {
+      "id": "epic",
+      "term": "EPIC",
+      "abbreviation": "Elector Photo Identity Card",
+      "definition": "The Voter ID card issued by the Election Commission of India.",
+      "category": "voter-registration",
+      "extra": "Issued after successful registration on electoral roll."
+    },
+    {
+      "id": "evm",
+      "term": "EVM",
+      "abbreviation": "Electronic Voting Machine",
+      "definition": "A device used for casting votes in elections.",
+      "category": "voting"
+    },
+    {
+      "id": "vvpat",
+      "term": "VVPAT",
+      "abbreviation": "Voter Verifiable Paper Audit Trail",
+      "definition": "A device that provides a paper trail of votes cast.",
+      "category": "voting"
+    },
+    {
+      "id": "mcc",
+      "term": "MCC",
+      "abbreviation": "Model Code of Conduct",
+      "definition": "Guidelines issued by ECI for parties and candidates during elections.",
+      "category": "conduct"
+    }
+  ],
+  "quiz": {
+    "questions": [
+      {
+        "id": "q1",
+        "category": "voting",
+        "difficulty": "beginner",
+        "question": "What does EVM stand for?",
+        "options": ["Electronic Voting Machine", "Extra Voter Movement", "Election Verification Method", "Electronic Voter Module"],
+        "correct": 0,
+        "explanation": "EVM stands for Electronic Voting Machine, used in Indian elections since 1982."
+      },
+      {
+        "id": "q2",
+        "category": "registration",
+        "difficulty": "beginner",
+        "question": "What is the minimum voting age in India?",
+        "options": ["16", "18", "21", "25"],
+        "correct": 1,
+        "explanation": "The minimum voting age in India is 18 years."
+      },
+      {
+        "id": "q3",
+        "category": "process",
+        "difficulty": "intermediate",
+        "question": "Which body conducts Lok Sabha elections?",
+        "options": ["President of India", "Prime Minister", "Election Commission of India", "Supreme Court"],
+        "correct": 2,
+        "explanation": "The Election Commission of India (ECI) conducts Lok Sabha elections."
+      }
+    ]
+  },
+  "checklist": [
+    {
+      "id": "voter-id",
+      "title": "Voter ID Card",
+      "description": "Ensure you have your EPIC (Voter ID) ready.",
+      "icon": "🪪",
+      "link": "https://voters.eci.gov.in/",
+      "linkText": "Apply for Voter ID"
+    },
+    {
+      "id": "check-roll",
+      "title": "Check Electoral Roll",
+      "description": "Verify your name is on the electoral roll.",
+      "icon": "📋",
+      "link": "https://electoralsearch.eci.gov.in/",
+      "linkText": "Search Electoral Roll"
+    }
+  ],
+  "timeline": {
+    "general": [
+      {
+        "id": "announcement",
+        "step": 1,
+        "phase": "Pre-Election",
+        "title": "Election Announcement",
+        "description": "The Election Commission announces the election schedule.",
+        "duration": "1-2 days",
+        "details": ["Date of polling announced", "Model Code of Conduct comes into effect"]
+      },
+      {
+        "id": "nomination",
+        "step": 2,
+        "phase": "Nomination",
+        "title": "Filing of Nominations",
+        "description": "Candidates file their nomination papers.",
+        "duration": "7-14 days",
+        "details": ["Candidates submit nomination papers", "Security deposit required"]
+      },
+      {
+        "id": "campaign",
+        "step": 3,
+        "phase": "Campaign",
+        "title": "Election Campaign",
+        "description": "Parties and candidates campaign for votes.",
+        "duration": "2-3 weeks",
+        "details": ["Rallies and public meetings held", "Campaign spending limits apply"]
+      },
+      {
+        "id": "polling",
+        "step": 4,
+        "phase": "Polling",
+        "title": "Polling Day",
+        "description": "Citizens cast their votes at polling booths.",
+        "duration": "1 day",
+        "details": ["Booths open 7 AM to 6 PM", "Voter ID required"]
+      },
+      {
+        "id": "counting",
+        "step": 5,
+        "phase": "Post-Election",
+        "title": "Counting of Votes",
+        "description": "Votes are counted and results declared.",
+        "duration": "1 day",
+        "details": ["Electronic counting machines used", "Results announced publicly"]
+      }
+    ],
+    "state": [
+      {
+        "id": "state-announcement",
+        "step": 1,
+        "phase": "Pre-Election",
+        "title": "State Election Announcement",
+        "description": "The ECI announces state assembly election schedule.",
+        "duration": "1-2 days",
+        "details": ["Assembly constituencies notified"]
+      },
+      {
+        "id": "state-nomination",
+        "step": 2,
+        "phase": "Nomination",
+        "title": "Nomination Filing",
+        "description": "Candidates file nominations for assembly seats.",
+        "duration": "7-14 days",
+        "details": ["State-specific requirements apply"]
+      },
+      {
+        "id": "state-polling",
+        "step": 3,
+        "phase": "Polling",
+        "title": "State Polling Day",
+        "description": "Voters cast ballots for state assembly.",
+        "duration": "1 day",
+        "details": ["Same day voting process"]
+      }
+    ],
+    "local": [
+      {
+        "id": "local-announcement",
+        "step": 1,
+        "phase": "Pre-Election",
+        "title": "Local Body Election Announcement",
+        "description": "State Election Commission announces local body elections.",
+        "duration": "1 day",
+        "details": ["Municipal wards notified"]
+      },
+      {
+        "id": "local-polling",
+        "step": 2,
+        "phase": "Polling",
+        "title": "Local Polling Day",
+        "description": "Voters elect local representatives.",
+        "duration": "1 day",
+        "details": ["Ward-level voting conducted"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "env": {
+    "browser": true,
+    "es2022": true,
+    "jest": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2022,
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-unused-vars": "warn",
+    "no-console": "off",
+    "eqeqeq": "error",
+    "no-eval": "error",
+    "no-implied-eval": "error",
+    "no-new-func": "error",
+    "prefer-const": "error",
+    "no-var": "error",
+    "curly": "error",
+    "no-throw-literal": "error",
+    "prefer-template": "warn",
+    "no-duplicate-imports": "error",
+    "no-self-compare": "error",
+    "no-template-curly-in-string": "warn"
+  },
+  "ignorePatterns": ["dist/", "node_modules/", "coverage/"]
+}

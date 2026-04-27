@@ -1,0 +1,21 @@
+{
+  "name": "Election Process Education Assistant",
+  "short_name": "ElectionEdu",
+  "description": "Interactive Election Process Education Assistant for Indian Democracy",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a1628",
+  "theme_color": "#0a1628",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "government", "politics"],
+  "lang": "en",
+  "dir": "ltr"
+}

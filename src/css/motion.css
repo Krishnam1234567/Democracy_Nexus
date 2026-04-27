@@ -1,0 +1,217 @@
+/* =========================================================
+   Democracy Dashboard — Motion Styles
+   ========================================================= */
+
+/* ---- Particle Animation ---- */
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+  animation: floatParticle linear infinite;
+}
+
+@keyframes floatParticle {
+  0% {
+    opacity: 0;
+    transform: translateY(100vh) rotate(0deg);
+  }
+  10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100px) rotate(720deg);
+  }
+}
+
+/* ---- Page Transition ---- */
+.page-enter {
+  animation: pageEnter 0.4s ease forwards;
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---- Fade In Up (for scroll reveal) ---- */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---- Staggered Children ---- */
+.stagger-children > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.stagger-children.visible > *:nth-child(1) { transition-delay: 0.05s; }
+.stagger-children.visible > *:nth-child(2) { transition-delay: 0.1s; }
+.stagger-children.visible > *:nth-child(3) { transition-delay: 0.15s; }
+.stagger-children.visible > *:nth-child(4) { transition-delay: 0.2s; }
+.stagger-children.visible > *:nth-child(5) { transition-delay: 0.25s; }
+.stagger-children.visible > *:nth-child(6) { transition-delay: 0.3s; }
+
+.stagger-children.visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---- Counter Animation ---- */
+.counter-animate {
+  transition: all 0.3s ease;
+}
+
+/* ---- Glow Pulse ---- */
+.glow-pulse {
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(59, 130, 246, 0.4);
+  }
+}
+
+/* ---- Shimmer Loading ---- */
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--color-surface) 25%,
+    var(--color-surface-hover) 50%,
+    var(--color-surface) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ---- Scale In ---- */
+.scale-in {
+  animation: scaleIn 0.3s ease forwards;
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ---- Slide In from Left ---- */
+.slide-in-left {
+  animation: slideInLeft 0.5s ease forwards;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ---- Confetti Burst (for quiz success) ---- */
+.confetti-piece {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  pointer-events: none;
+  z-index: 9999;
+  animation: confettiFall linear forwards;
+}
+
+@keyframes confettiFall {
+  0% {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100vh) rotate(720deg);
+  }
+}
+
+/* ---- Progress Bar Animation ---- */
+.animate-progress {
+  animation: progressGrow 1s ease forwards;
+}
+
+@keyframes progressGrow {
+  from { width: 0%; }
+}
+
+/* ---- Hover Float ---- */
+.hover-float {
+  transition: transform 0.3s ease;
+}
+
+.hover-float:hover {
+  transform: translateY(-5px);
+}
+
+/* ---- Timeline Connector Animation ---- */
+.timeline-connector-animate {
+  animation: drawLine 1s ease forwards;
+}
+
+@keyframes drawLine {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+
+/* ---- Ripple Effect ---- */
+.ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at var(--ripple-x, 50%) var(--ripple-y, 50%), rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.ripple:active::after {
+  opacity: 1;
+}

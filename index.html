@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Interactive Democracy Dashboard — Learn about election timelines, voting steps, and democratic processes with AI-powered guidance." />
+  <meta name="keywords" content="democracy, dashboard, election, voting, education, India, election process, voter registration, EVM, VVPAT" />
+  <meta name="author" content="kriashnam" />
+  <meta name="theme-color" content="#0d1b2a" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Democracy Dashboard" />
+  <meta property="og:description" content="Learn about election processes, timelines, and steps in an interactive way." />
+  <meta property="og:type" content="website" />
+
+  <!-- Security Headers -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://cdn.consentmanager.net https://apis.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https: wss:;" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="DENY" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <title>Democracy Dashboard | Learn Democracy</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- Preloads -->
+  <link rel="preload" as="style" href="/src/css/index.css" />
+  <link rel="preload" as="style" href="/src/css/ui-components.css" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/src/css/index.css" />
+  <link rel="stylesheet" href="/src/css/ui-components.css" />
+  <link rel="stylesheet" href="/src/css/ai-chat.css" />
+  <link rel="stylesheet" href="/src/css/motion.css" />
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="/manifest.json" />
+<!-- Consent Manager -->
+  <script type="text/javascript" data-cmp-ab="1" src="https://cdn.consentmanager.net/delivery/autoblocking/f06d08bb7277a.js" data-cmp-host="d.delivery.consentmanager.net" data-cmp-cdn="cdn.consentmanager.net" data-cmp-codesrc="16"></script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MNT4JB72HW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MNT4JB72HW');
+  </script>
+</head>
+<body>
+  <!-- Skip Navigation Link for Accessibility -->
+  <a href="#main-content" class="skip-link" id="skip-nav">Skip to main content</a>
+
+  <!-- Loading Screen -->
+  <div id="loading-screen" class="loading-screen" role="status" aria-label="Loading application">
+    <div class="loading-spinner">
+      <div class="spinner-ring"></div>
+      <div class="spinner-ring"></div>
+      <div class="spinner-ring"></div>
+    </div>
+    <p class="loading-text">Loading Election Education Assistant...</p>
+  </div>
+
+  <!-- Notification Toast Container -->
+  <div id="toast-container" class="toast-container" role="alert" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Header / Navigation -->
+  <header class="header" role="banner" id="main-header">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="nav-brand" id="nav-brand">
+        <span class="nav-logo" aria-hidden="true">🗳️</span>
+        <span class="nav-title">Democracy Dashboard</span>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <button
+        class="nav-toggle"
+        id="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="nav-menu"
+        aria-label="Toggle navigation menu"
+      >
+        <span class="hamburger-line" aria-hidden="true"></span>
+        <span class="hamburger-line" aria-hidden="true"></span>
+        <span class="hamburger-line" aria-hidden="true"></span>
+      </button>
+
+      <!-- Navigation Links -->
+      <ul class="nav-menu" id="nav-menu" role="menubar">
+        <li role="none"><a href="#home" class="nav-link active" role="menuitem" id="nav-home" data-page="home">Home</a></li>
+        <li role="none"><a href="#timeline" class="nav-link" role="menuitem" id="nav-timeline" data-page="timeline">Timeline</a></li>
+        <li role="none"><a href="#quiz" class="nav-link" role="menuitem" id="nav-quiz" data-page="quiz">Quiz</a></li>
+        <li role="none"><a href="#glossary" class="nav-link" role="menuitem" id="nav-glossary" data-page="glossary">Glossary</a></li>
+        <li role="none"><a href="#checklist" class="nav-link" role="menuitem" id="nav-checklist" data-page="checklist">Checklist</a></li>
+      </ul>
+
+      <!-- Auth Section -->
+      <div class="nav-auth" id="nav-auth">
+        <button
+          class="btn btn-outline btn-sm"
+          id="auth-button"
+          type="button"
+          aria-label="Sign in with Google"
+        >
+          Sign In
+        </button>
+        <div class="user-avatar" id="user-avatar" hidden aria-label="User profile">
+          <img src="" alt="User avatar" id="user-avatar-img" width="32" height="32" />
+          <span id="user-display-name" class="user-name"></span>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content Area -->
+  <main id="main-content" role="main" tabindex="-1">
+
+    <!-- ============================================ -->
+    <!-- HOME PAGE -->
+    <!-- ============================================ -->
+    <section id="page-home" class="page page-home active" aria-labelledby="home-heading">
+      <!-- Hero Section -->
+      <div class="hero" id="hero-section">
+        <div class="hero-particles" id="hero-particles" aria-hidden="true"></div>
+        <div class="hero-content">
+          <h1 id="home-heading" class="hero-title">
+            <span class="text-gradient">Understand</span> the
+            <span class="text-highlight">Election Process</span>
+          </h1>
+          <p class="hero-subtitle">
+            Your interactive guide to democracy — explore election timelines, test your knowledge,
+            and learn how every vote shapes the nation.
+          </p>
+          <div class="hero-cta">
+            <a href="#timeline" class="btn btn-primary btn-lg" id="cta-explore">
+              <span aria-hidden="true">📅</span> Explore Timeline
+            </a>
+            <a href="#quiz" class="btn btn-secondary btn-lg" id="cta-quiz">
+              <span aria-hidden="true">📝</span> Take a Quiz
+            </a>
+          </div>
+          <!-- Quick Stats -->
+          <div class="hero-stats" id="hero-stats" aria-label="Democratic statistics">
+            <div class="stat-card" id="stat-voters">
+              <span class="stat-number" data-count="970">0</span><span class="stat-suffix">M+</span>
+              <span class="stat-label">Registered Voters</span>
+            </div>
+            <div class="stat-card" id="stat-constituencies">
+              <span class="stat-number" data-count="543">0</span>
+              <span class="stat-label">Lok Sabha Seats</span>
+            </div>
+            <div class="stat-card" id="stat-states">
+              <span class="stat-number" data-count="28">0</span>
+              <span class="stat-label">States</span>
+            </div>
+            <div class="stat-card" id="stat-years">
+              <span class="stat-number" data-count="75">0</span><span class="stat-suffix">+</span>
+              <span class="stat-label">Years of Democracy</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Features Overview -->
+      <div class="features-section" id="features-section">
+        <h2 class="section-title">What You'll Learn</h2>
+        <div class="features-grid">
+          <article class="feature-card" id="feature-timeline" tabindex="0">
+            <div class="feature-icon" aria-hidden="true">📅</div>
+            <h3 class="feature-title">Election Timeline</h3>
+            <p class="feature-desc">Follow every step of the election process — from announcement to result declaration — with our interactive visual timeline.</p>
+          </article>
+          <article class="feature-card" id="feature-quiz" tabindex="0">
+            <div class="feature-icon" aria-hidden="true">📝</div>
+            <h3 class="feature-title">Knowledge Quiz</h3>
+            <p class="feature-desc">Test your understanding of elections with engaging quizzes across multiple difficulty levels and categories.</p>
+          </article>
+          <article class="feature-card" id="feature-glossary" tabindex="0">
+            <div class="feature-icon" aria-hidden="true">📖</div>
+            <h3 class="feature-title">Election Glossary</h3>
+            <p class="feature-desc">Explore key election terms — from EVM to NOTA — with clear definitions and real-world context.</p>
+          </article>
+          <article class="feature-card" id="feature-checklist" tabindex="0">
+            <div class="feature-icon" aria-hidden="true">✅</div>
+            <h3 class="feature-title">Voter Checklist</h3>
+            <p class="feature-desc">Ensure you're election-ready with our step-by-step voter registration and readiness checklist.</p>
+          </article>
+          <article class="feature-card" id="feature-ai" tabindex="0">
+            <div class="feature-icon" aria-hidden="true">🤖</div>
+            <h3 class="feature-title">AI Assistant</h3>
+            <p class="feature-desc">Ask any question about elections and get instant, accurate answers from our Gemini AI-powered chatbot.</p>
+          </article>
+          <article class="feature-card" id="feature-progress" tabindex="0">
+            <div class="feature-icon" aria-hidden="true">📊</div>
+            <h3 class="feature-title">Track Progress</h3>
+            <p class="feature-desc">Sign in to save your quiz scores, chat history, and checklist progress across sessions.</p>
+          </article>
+        </div>
+      </div>
+
+      <!-- Election Types Overview -->
+      <div class="election-types-section" id="election-types-section">
+        <h2 class="section-title">Types of Elections in India</h2>
+        <div class="types-grid">
+          <article class="type-card" id="type-general" tabindex="0">
+            <div class="type-badge">National</div>
+            <h3>General Elections (Lok Sabha)</h3>
+            <p>Held every 5 years to elect 543 Members of Parliament to the Lower House. The party/coalition with majority forms the central government.</p>
+            <ul class="type-facts">
+              <li>Conducted by the Election Commission of India</li>
+              <li>Uses First-Past-The-Post (FPTP) system</li>
+              <li>Largest democratic exercise in the world</li>
+            </ul>
+          </article>
+          <article class="type-card" id="type-state" tabindex="0">
+            <div class="type-badge">State</div>
+            <h3>State Elections (Vidhan Sabha)</h3>
+            <p>Held every 5 years in each state to elect members of the State Legislative Assembly. The winning party forms the state government.</p>
+            <ul class="type-facts">
+              <li>Each state has its own election schedule</li>
+              <li>Number of seats varies by state population</li>
+              <li>Can be held simultaneously with Lok Sabha elections</li>
+            </ul>
+          </article>
+          <article class="type-card" id="type-local" tabindex="0">
+            <div class="type-badge">Local</div>
+            <h3>Local Body Elections</h3>
+            <p>Elections to Panchayats (rural) and Municipalities (urban) for grassroots governance. Strengthened by the 73rd and 74th Constitutional Amendments.</p>
+            <ul class="type-facts">
+              <li>Three-tier system: Village, Block, District</li>
+              <li>Mandatory reservation for SC/ST and women</li>
+              <li>Conducted by State Election Commissions</li>
+            </ul>
+          </article>
+          <article class="type-card" id="type-presidential" tabindex="0">
+            <div class="type-badge">Special</div>
+            <h3>Presidential & Other Elections</h3>
+            <p>The President is elected by an Electoral College. Rajya Sabha elections use proportional representation with a single transferable vote system.</p>
+            <ul class="type-facts">
+              <li>President elected by MPs and MLAs</li>
+              <li>Rajya Sabha: 1/3 members retire every 2 years</li>
+              <li>By-elections fill casual vacancies</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- TIMELINE PAGE -->
+    <!-- ============================================ -->
+    <section id="page-timeline" class="page page-timeline" aria-labelledby="timeline-heading" hidden>
+      <div class="page-container">
+        <div class="page-header">
+          <h1 id="timeline-heading" class="page-title">
+            <span aria-hidden="true">📅</span> Election Process Timeline
+          </h1>
+          <p class="page-subtitle">
+            Follow the step-by-step journey of how elections are conducted in India — from the announcement to the formation of government.
+          </p>
+        </div>
+
+        <!-- Timeline Type Selector -->
+        <div class="timeline-selector" role="tablist" aria-label="Election type selector">
+          <button class="timeline-tab active" role="tab" id="tab-general" aria-selected="true" aria-controls="timeline-general" data-type="general">
+            General Election
+          </button>
+          <button class="timeline-tab" role="tab" id="tab-state" aria-selected="false" aria-controls="timeline-state" data-type="state">
+            State Election
+          </button>
+          <button class="timeline-tab" role="tab" id="tab-local" aria-selected="false" aria-controls="timeline-local" data-type="local">
+            Local Body Election
+          </button>
+        </div>
+
+        <!-- Timeline Container -->
+        <div class="timeline-container" id="timeline-container" role="list" aria-label="Election process steps">
+          <!-- Timeline items will be dynamically rendered by timeline.js -->
+        </div>
+
+        <!-- Election Process Summary -->
+        <div class="timeline-summary glass-card" id="timeline-summary">
+          <h2>Key Takeaways</h2>
+          <div class="summary-grid" id="summary-grid">
+            <!-- Populated dynamically -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- QUIZ PAGE -->
+    <!-- ============================================ -->
+    <section id="page-quiz" class="page page-quiz" aria-labelledby="quiz-heading" hidden>
+      <div class="page-container">
+        <div class="page-header">
+          <h1 id="quiz-heading" class="page-title">
+            <span aria-hidden="true">📝</span> Election Knowledge Quiz
+          </h1>
+          <p class="page-subtitle">
+            Test your knowledge about elections and democracy. Choose a difficulty level and see how much you know!
+          </p>
+        </div>
+
+        <!-- Quiz Setup Panel -->
+        <div class="quiz-setup glass-card" id="quiz-setup" role="form" aria-label="Quiz configuration">
+          <h2>Choose Your Quiz</h2>
+
+          <div class="quiz-options">
+            <!-- Category Selection -->
+            <fieldset class="quiz-fieldset" id="quiz-category-fieldset">
+              <legend>Category</legend>
+              <div class="quiz-radio-group" role="radiogroup">
+                <label class="quiz-radio" id="cat-all-label">
+                  <input type="radio" name="category" value="all" checked id="cat-all" />
+                  <span class="radio-custom"></span>
+                  All Topics
+                </label>
+                <label class="quiz-radio" id="cat-process-label">
+                  <input type="radio" name="category" value="process" id="cat-process" />
+                  <span class="radio-custom"></span>
+                  Election Process
+                </label>
+                <label class="quiz-radio" id="cat-constitutional-label">
+                  <input type="radio" name="category" value="constitutional" id="cat-constitutional" />
+                  <span class="radio-custom"></span>
+                  Constitutional
+                </label>
+                <label class="quiz-radio" id="cat-technology-label">
+                  <input type="radio" name="category" value="technology" id="cat-technology" />
+                  <span class="radio-custom"></span>
+                  Technology & EVMs
+                </label>
+                <label class="quiz-radio" id="cat-history-label">
+                  <input type="radio" name="category" value="history" id="cat-history" />
+                  <span class="radio-custom"></span>
+                  Election History
+                </label>
+              </div>
+            </fieldset>
+
+            <!-- Difficulty Selection -->
+            <fieldset class="quiz-fieldset" id="quiz-difficulty-fieldset">
+              <legend>Difficulty</legend>
+              <div class="quiz-radio-group" role="radiogroup">
+                <label class="quiz-radio" id="diff-beginner-label">
+                  <input type="radio" name="difficulty" value="beginner" checked id="diff-beginner" />
+                  <span class="radio-custom"></span>
+                  🟢 Beginner
+                </label>
+                <label class="quiz-radio" id="diff-intermediate-label">
+                  <input type="radio" name="difficulty" value="intermediate" id="diff-intermediate" />
+                  <span class="radio-custom"></span>
+                  🟡 Intermediate
+                </label>
+                <label class="quiz-radio" id="diff-advanced-label">
+                  <input type="radio" name="difficulty" value="advanced" id="diff-advanced" />
+                  <span class="radio-custom"></span>
+                  🔴 Advanced
+                </label>
+              </div>
+            </fieldset>
+          </div>
+
+          <button class="btn btn-primary btn-lg" id="quiz-start-btn" type="button">
+            Start Quiz
+          </button>
+        </div>
+
+        <!-- Active Quiz Area -->
+        <div class="quiz-active glass-card" id="quiz-active" hidden aria-live="polite">
+          <!-- Quiz Progress -->
+          <div class="quiz-progress" id="quiz-progress">
+            <div class="quiz-progress-bar" id="quiz-progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <div class="quiz-meta">
+              <span id="quiz-question-count">Question 1 of 10</span>
+              <span id="quiz-score-display">Score: 0</span>
+              <span id="quiz-timer" aria-label="Time remaining">⏱️ 30s</span>
+            </div>
+          </div>
+
+          <!-- Question Display -->
+          <div class="quiz-question" id="quiz-question-area">
+            <h2 class="question-text" id="question-text"></h2>
+            <div class="quiz-answers" id="quiz-answers" role="radiogroup" aria-label="Answer options">
+              <!-- Answer buttons rendered dynamically -->
+            </div>
+          </div>
+
+          <!-- Explanation Panel -->
+          <div class="quiz-explanation" id="quiz-explanation" hidden>
+            <div class="explanation-header" id="explanation-header"></div>
+            <p class="explanation-text" id="explanation-text"></p>
+            <button class="btn btn-primary" id="quiz-next-btn" type="button">
+              Next Question →
+            </button>
+          </div>
+        </div>
+
+        <!-- Quiz Results Panel -->
+        <div class="quiz-results glass-card" id="quiz-results" hidden>
+          <h2 id="results-title">Quiz Complete!</h2>
+          <div class="results-stats" id="results-stats">
+            <div class="result-circle" id="result-circle">
+              <svg viewBox="0 0 100 100" class="result-svg" role="img" aria-label="Score percentage">
+                <circle class="result-bg" cx="50" cy="50" r="45"></circle>
+                <circle class="result-progress" cx="50" cy="50" r="45" id="result-progress-circle"></circle>
+              </svg>
+              <span class="result-percentage" id="result-percentage">0%</span>
+            </div>
+            <div class="result-details">
+              <p id="result-correct">Correct: 0/10</p>
+              <p id="result-time">Total Time: 0s</p>
+              <p id="result-grade"></p>
+            </div>
+          </div>
+          <div class="results-actions">
+            <button class="btn btn-primary" id="quiz-retry-btn" type="button">Try Again</button>
+            <button class="btn btn-secondary" id="quiz-new-btn" type="button">New Quiz</button>
+          </div>
+
+          <!-- Leaderboard -->
+          <div class="leaderboard" id="leaderboard">
+            <h3>🏆 Leaderboard</h3>
+            <ol class="leaderboard-list" id="leaderboard-list" role="list" aria-label="Top scores">
+              <!-- Populated dynamically from Firestore -->
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- GLOSSARY PAGE -->
+    <!-- ============================================ -->
+    <section id="page-glossary" class="page page-glossary" aria-labelledby="glossary-heading" hidden>
+      <div class="page-container">
+        <div class="page-header">
+          <h1 id="glossary-heading" class="page-title">
+            <span aria-hidden="true">📖</span> Election Glossary
+          </h1>
+          <p class="page-subtitle">
+            Understand key election terms and concepts used in Indian democracy.
+          </p>
+        </div>
+
+        <!-- Search & Filter -->
+        <div class="glossary-controls glass-card" id="glossary-controls">
+          <div class="glossary-search">
+            <label for="glossary-search-input" class="sr-only">Search election terms</label>
+            <input
+              type="search"
+              id="glossary-search-input"
+              class="search-input"
+              placeholder="Search terms (e.g., EVM, NOTA, Constituency...)"
+              autocomplete="off"
+              aria-describedby="search-results-count"
+            />
+            <span class="search-icon" aria-hidden="true">🔍</span>
+          </div>
+          <div class="glossary-filters" role="tablist" aria-label="Filter by category" id="glossary-filters">
+            <button class="filter-btn active" role="tab" aria-selected="true" data-category="all" id="filter-all">All</button>
+            <button class="filter-btn" role="tab" aria-selected="false" data-category="process" id="filter-process">Process</button>
+            <button class="filter-btn" role="tab" aria-selected="false" data-category="technology" id="filter-technology">Technology</button>
+            <button class="filter-btn" role="tab" aria-selected="false" data-category="legal" id="filter-legal">Legal</button>
+            <button class="filter-btn" role="tab" aria-selected="false" data-category="institutions" id="filter-institutions">Institutions</button>
+            <button class="filter-btn" role="tab" aria-selected="false" data-category="voting" id="filter-voting">Voting</button>
+          </div>
+          <p class="search-results-count" id="search-results-count" aria-live="polite"></p>
+        </div>
+
+        <!-- Glossary Grid -->
+        <div class="glossary-grid" id="glossary-grid" role="list" aria-label="Election terms">
+          <!-- Glossary cards rendered dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- CHECKLIST PAGE -->
+    <!-- ============================================ -->
+    <section id="page-checklist" class="page page-checklist" aria-labelledby="checklist-heading" hidden>
+      <div class="page-container">
+        <div class="page-header">
+          <h1 id="checklist-heading" class="page-title">
+            <span aria-hidden="true">✅</span> Voter Readiness Checklist
+          </h1>
+          <p class="page-subtitle">
+            Make sure you're fully prepared to exercise your democratic right. Complete each step to be election-ready!
+          </p>
+        </div>
+
+        <!-- Progress Overview -->
+        <div class="checklist-progress glass-card" id="checklist-progress-card">
+          <div class="checklist-progress-ring">
+            <svg viewBox="0 0 100 100" class="progress-ring-svg" role="img" aria-label="Checklist completion progress">
+              <circle class="progress-ring-bg" cx="50" cy="50" r="45"></circle>
+              <circle class="progress-ring-fill" cx="50" cy="50" r="45" id="checklist-progress-ring"></circle>
+            </svg>
+            <span class="progress-ring-text" id="checklist-progress-text">0%</span>
+          </div>
+          <div class="checklist-progress-info">
+            <h2 id="checklist-status">Getting Started</h2>
+            <p id="checklist-items-count">0 of 10 steps completed</p>
+          </div>
+        </div>
+
+        <!-- Age Calculator -->
+        <div class="age-calculator glass-card" id="age-calculator">
+          <h2>🎂 Age Eligibility Check</h2>
+          <p>You must be at least 18 years old on the qualifying date to vote in Indian elections.</p>
+          <div class="age-form">
+            <label for="dob-input">Your Date of Birth:</label>
+            <input type="date" id="dob-input" class="date-input" aria-describedby="age-result" />
+            <button class="btn btn-primary btn-sm" id="check-age-btn" type="button">Check Eligibility</button>
+          </div>
+          <p class="age-result" id="age-result" aria-live="polite"></p>
+        </div>
+
+        <!-- Checklist Items -->
+        <div class="checklist-items" id="checklist-items" role="list" aria-label="Voter readiness steps">
+          <!-- Checklist items rendered dynamically -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo" id="main-footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <span aria-hidden="true">🗳️</span>
+        <span>Democracy Dashboard</span>
+      </div>
+      <p class="footer-text">
+        An educational tool to promote democratic awareness.
+        Built with ❤️ for India's democracy.
+      </p>
+      <div class="footer-links">
+        <a href="https://www.eci.gov.in/" target="_blank" rel="noopener noreferrer" id="footer-eci">
+          Election Commission of India
+        </a>
+        <a href="https://voters.eci.gov.in/" target="_blank" rel="noopener noreferrer" id="footer-nvsp">
+          National Voter Service Portal
+        </a>
+      </div>
+      <p class="footer-disclaimer">
+        <small>Disclaimer: This is an educational tool. For official election information, visit <a href="https://www.eci.gov.in/" target="_blank" rel="noopener noreferrer">eci.gov.in</a>.</small>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Chatbot Widget -->
+  <div class="chatbot-widget" id="chatbot-widget" aria-label="AI Election Assistant">
+    <!-- Chatbot Toggle Button -->
+    <button
+      class="chatbot-toggle"
+      id="chatbot-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="chatbot-panel"
+      aria-label="Open AI Election Assistant chat"
+    >
+      <span class="chatbot-toggle-icon" aria-hidden="true">🤖</span>
+      <span class="chatbot-toggle-badge" id="chatbot-badge" hidden aria-label="New messages">1</span>
+    </button>
+
+    <!-- Chatbot Panel -->
+    <div class="chatbot-panel" id="chatbot-panel" hidden role="dialog" aria-label="AI Election Assistant" aria-modal="false">
+      <div class="chatbot-header">
+        <div class="chatbot-header-info">
+          <span class="chatbot-avatar" aria-hidden="true">🤖</span>
+          <div>
+            <h2 class="chatbot-name">Election Assistant</h2>
+            <span class="chatbot-status" id="chatbot-status">Powered by Gemini AI</span>
+          </div>
+        </div>
+        <div class="chatbot-header-actions">
+          <button class="chatbot-btn" id="chatbot-clear" type="button" aria-label="Clear chat history" title="Clear chat">
+            🗑️
+          </button>
+          <button class="chatbot-btn" id="chatbot-close" type="button" aria-label="Close chat panel" title="Close">
+            ✕
+          </button>
+        </div>
+      </div>
+
+      <div class="chatbot-messages" id="chatbot-messages" role="log" aria-live="polite" aria-label="Chat messages" tabindex="0">
+        <!-- Welcome message -->
+        <div class="chat-message bot-message" id="welcome-message">
+          <div class="message-avatar" aria-hidden="true">🤖</div>
+          <div class="message-content">
+            <p>Namaste! 🙏 I'm your Election Education Assistant, powered by Google Gemini AI.</p>
+            <p>Ask me anything about elections — voting process, registration, EVMs, political parties, or any election-related topic!</p>
+            <div class="suggested-questions" id="suggested-questions">
+              <p class="suggestions-label">Try asking:</p>
+              <button class="suggestion-chip" type="button" data-question="How does the Indian election process work?">How does the Indian election process work?</button>
+              <button class="suggestion-chip" type="button" data-question="What is an EVM and how does it work?">What is an EVM and how does it work?</button>
+              <button class="suggestion-chip" type="button" data-question="How can I register to vote?">How can I register to vote?</button>
+              <button class="suggestion-chip" type="button" data-question="What is NOTA?">What is NOTA?</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chat Input -->
+      <div class="chatbot-input-area" id="chatbot-input-area">
+        <label for="chatbot-input" class="sr-only">Type your question about elections</label>
+        <textarea
+          id="chatbot-input"
+          class="chatbot-input"
+          placeholder="Ask about elections..."
+          rows="1"
+          maxlength="500"
+          aria-describedby="chatbot-char-count"
+        ></textarea>
+        <span class="chatbot-char-count" id="chatbot-char-count" aria-live="off">0/500</span>
+        <button
+          class="chatbot-send"
+          id="chatbot-send"
+          type="button"
+          aria-label="Send message"
+          disabled
+        >
+          <span aria-hidden="true">➤</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Application Script -->
+  <script type="module" src="/src/js/app.js"></script>
+</body>
+</html>

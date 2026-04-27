@@ -1,0 +1,43 @@
+# 1. Query to list all polls accessible to the public
+query ListPublicPolls @auth(level: PUBLIC, insecureReason: "This operation is safe to expose to the public as it only fetches public poll data.") {
+  polls {
+    id
+    question
+    options {
+      id
+      text
+    }
+  }
+}
+
+# 2. Mutation for a logged-in user to create a new poll
+mutation CreateNewPoll($question: String!, $options: [PollOptionInput!]!) @auth(level: USER, insecureReason: "This operation requires a logged-in user to create a poll.") {
+  poll_insert(data: {
+    question: $question,
+    creatorUid_expr: "auth.uid", # Automatically sets the creator based on the authenticated user
+    options: {
+      create: $options
+    }
+  })
+}
+
+# 3. Query to get details of a specific poll, only if the current user is the creator
+query GetMyPollDetails($pollId: ID!) @auth(level: USER, insecureReason: "This operation is safe to expose to all logged-in users, but access is restricted to the poll creator.") {
+  poll(key: {id: $pollId}, where: {creatorUid: {eq_expr: "auth.uid"}}) {
+    id
+    question
+    options {
+      id
+      text
+      votes
+    }
+    createdAt
+  }
+}
+
+# 4. Mutation for a logged-in user to cast a vote on a poll option
+mutation CastVote($pollOptionId: ID!) @auth(level: USER, insecureReason: "This operation requires a logged-in user to cast a vote.") {
+  pollOption_update(key: {id: $pollOptionId}, data: {
+    votes_incr: 1 # Increments the vote count
+  })
+}

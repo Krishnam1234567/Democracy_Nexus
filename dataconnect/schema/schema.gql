@@ -1,0 +1,47 @@
+type User @table {
+  displayName: String!
+  createdAt: Timestamp!
+  email: String
+  photoUrl: String
+  registeredToVote: Boolean
+}
+
+type Election @table {
+  name: String!
+  electionDate: Date!
+  jurisdiction: String!
+  createdAt: Timestamp!
+  description: String
+  isCompleted: Boolean
+  electionResults: String
+}
+
+type Candidate @table {
+  firstName: String!
+  lastName: String!
+  partyAffiliation: String!
+  createdAt: Timestamp!
+  biography: String
+  website: String
+  profileImageUrl: String
+  election: Election
+}
+
+type Issue @table {
+  name: String!
+  createdAt: Timestamp!
+  description: String
+}
+
+type CandidateStance @table(key: ["candidate", "issue"]) {
+  candidate: Candidate!
+  issue: Issue!
+  stanceDescription: String!
+  sourceLink: String
+}
+
+type Watchlist @table(key: ["user", "election"]) {
+  user: User!
+  election: Election!
+  addedAt: Timestamp!
+}

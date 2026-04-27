@@ -1,0 +1,78 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return request.auth.uid == userId;
+    }
+
+    function isValidScoreData() {
+      let data = request.resource.data;
+      return data.score is number
+        && data.total is number
+        && data.percentage is number
+        && data.score >= 0
+        && data.total > 0
+        && data.percentage >= 0
+        && data.percentage <= 100;
+    }
+
+    function isValidChatMessage() {
+      let data = request.resource.data;
+      return data.content is string
+        && data.content.size() > 0
+        && data.content.size() <= 500
+        && data.role in ['user', 'bot'];
+    }
+
+    function isValidDisplayName() {
+      let name = request.resource.data.displayName;
+      return name is string
+        && name.size() > 0
+        && name.size() <= 50;
+    }
+
+    function isValidProgress() {
+      return request.resource.data.progress is map;
+    }
+
+    match /chatHistory/{document=**} {
+      allow read: if isAuthenticated() && isOwner(request.auth.uid);
+      allow create: if isAuthenticated()
+        && isOwner(request.auth.uid)
+        && isValidChatMessage();
+      allow delete: if isAuthenticated() && isOwner(request.auth.uid);
+    }
+
+    match /quizScores/{document} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated()
+        && request.resource.data.userId == request.auth.uid
+        && isValidScoreData();
+    }
+
+    match /leaderboard/{userId} {
+      allow read: if isAuthenticated();
+      allow write: if isAuthenticated()
+        && isOwner(userId)
+        && isValidDisplayName();
+    }
+
+    match /checklistProgress/{userId} {
+      allow read: if isAuthenticated() && isOwner(userId);
+      allow write: if isAuthenticated()
+        && isOwner(userId)
+        && isValidProgress();
+    }
+
+    match /users/{userId} {
+      allow read: if isAuthenticated() && isOwner(userId);
+      allow write: if isAuthenticated() && isOwner(userId);
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "election-a2234",
+    "election": "election-a2234"
+  },
+  "targets": {},
+  "etags": {}
+}

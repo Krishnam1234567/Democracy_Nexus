@@ -1,0 +1,752 @@
+{
+  "timeline": {
+    "general": [
+      {
+        "id": "announcement",
+        "step": 1,
+        "phase": "Pre-Election",
+        "title": "Announcement of Election Schedule",
+        "description": "The Election Commission of India (ECI) announces the election schedule, including key dates for nominations, campaigning, and polling. The Model Code of Conduct (MCC) comes into effect immediately.",
+        "duration": "Announced 6-8 weeks before polling",
+        "details": [
+          "MCC becomes effective from date of announcement",
+          "No new government schemes can be announced",
+          "Transfer of government officials to ensure neutrality",
+          "Security arrangements begin nationwide",
+          "ECI sets up control rooms and monitoring cells"
+        ]
+      },
+      {
+        "id": "notification",
+        "step": 2,
+        "phase": "Pre-Election",
+        "title": "Issue of Notification / Gazette",
+        "description": "The formal notification is issued calling upon the electors of a constituency to elect a representative. This is published in the official Gazette of India.",
+        "duration": "7 days before last date of nomination",
+        "details": [
+          "Published in the Gazette of India",
+          "Mentions the date of nomination, scrutiny, withdrawal, and polling",
+          "Electoral rolls are finalized and frozen",
+          "Returning Officers are appointed for each constituency",
+          "Political parties begin candidate selection process"
+        ]
+      },
+      {
+        "id": "nomination",
+        "step": 3,
+        "phase": "Nomination",
+        "title": "Filing of Nominations",
+        "description": "Candidates file their nomination papers with the Returning Officer. They must submit personal details, asset declarations, criminal records (if any), and a security deposit.",
+        "duration": "1 week window for filing",
+        "details": [
+          "Security deposit: ₹25,000 for general candidates, ₹12,500 for SC/ST",
+          "Candidates must submit affidavit with details of assets and liabilities",
+          "Criminal cases (if any) must be declared",
+          "Educational qualification must be mentioned",
+          "Multiple nominations (up to 2) can be filed as a safeguard"
+        ]
+      },
+      {
+        "id": "scrutiny",
+        "step": 4,
+        "phase": "Nomination",
+        "title": "Scrutiny of Nominations",
+        "description": "The Returning Officer examines all nomination papers to ensure they are complete and valid. Invalid nominations are rejected based on legal criteria.",
+        "duration": "1 day after last date of nomination",
+        "details": [
+          "Verification of proposer details and signatures",
+          "Check for age eligibility (minimum 25 years for Lok Sabha)",
+          "Verification of security deposit payment",
+          "Ensuring no disqualification under RPA 1951",
+          "Candidates can raise objections against other nominations"
+        ]
+      },
+      {
+        "id": "withdrawal",
+        "step": 5,
+        "phase": "Nomination",
+        "title": "Withdrawal of Candidatures",
+        "description": "Candidates may withdraw their nominations by giving notice in writing to the Returning Officer. After this deadline, the final list of candidates is published.",
+        "duration": "2 days after scrutiny",
+        "details": [
+          "Written withdrawal notice required before 3 PM on the last date",
+          "Withdrawal is irrevocable once submitted",
+          "Final list of contesting candidates is published",
+          "Election symbols are allotted to candidates",
+          "Ballot paper / EVM position is determined by draw of lots if needed"
+        ]
+      },
+      {
+        "id": "campaigning",
+        "step": 6,
+        "phase": "Campaign",
+        "title": "Election Campaign Period",
+        "description": "Political parties and candidates campaign to win voter support through rallies, door-to-door canvassing, social media, TV advertisements, and public meetings.",
+        "duration": "2-3 weeks (ends 48 hours before polling)",
+        "details": [
+          "Campaign expenditure limit: ₹95 lakh for Lok Sabha (2024)",
+          "No religious or communal appeals allowed",
+          "No use of government resources for campaigning",
+          "EC monitors campaign spending through expenditure observers",
+          "Paid news and social media campaigns are monitored",
+          "Liquor distribution and cash-for-votes are strictly prohibited"
+        ]
+      },
+      {
+        "id": "silence",
+        "step": 7,
+        "phase": "Campaign",
+        "title": "Campaign Silence Period",
+        "description": "All campaigning must cease 48 hours before polling begins. This 'silence period' allows voters to make their decision without last-minute influence.",
+        "duration": "48 hours before polling day",
+        "details": [
+          "No public meetings, processions, or rallies allowed",
+          "No advertisements in print, electronic, or social media",
+          "Violation can lead to disqualification under Section 126 of RPA",
+          "Static surveillance teams check for illegal activities",
+          "Dry day declared — no sale of liquor permitted"
+        ]
+      },
+      {
+        "id": "polling",
+        "step": 8,
+        "phase": "Polling",
+        "title": "Polling Day — Casting Your Vote",
+        "description": "Voters cast their votes at designated polling stations using Electronic Voting Machines (EVMs) and can verify their choice through the VVPAT slip.",
+        "duration": "Usually 7 AM to 6 PM (may vary)",
+        "details": [
+          "Voter must carry valid photo ID (EPIC, Aadhaar, Passport, etc.)",
+          "Indelible ink is applied to the left index finger",
+          "Vote is cast by pressing the button next to the chosen candidate on the EVM",
+          "VVPAT displays the printed slip for 7 seconds for verification",
+          "NOTA (None of the Above) option is available since 2013",
+          "Persons with disabilities and senior citizens get priority voting",
+          "Postal ballots available for certain categories (service voters, etc.)"
+        ]
+      },
+      {
+        "id": "counting",
+        "step": 9,
+        "phase": "Post-Election",
+        "title": "Counting of Votes",
+        "description": "EVMs are stored securely and counting takes place on the designated counting day. Postal ballots are counted first, followed by EVM votes round by round.",
+        "duration": "Usually a single day (within a few days of polling)",
+        "details": [
+          "Strong rooms with EVMs are under 24/7 CCTV surveillance",
+          "Counting starts at 8 AM under the supervision of the Returning Officer",
+          "Postal ballot counting begins 30 minutes before EVM counting",
+          "Counting agents of each candidate can observe the process",
+          "VVPAT slips of 5 random booths per constituency are physically verified",
+          "Results are announced on rounds basis as counting progresses"
+        ]
+      },
+      {
+        "id": "results",
+        "step": 10,
+        "phase": "Post-Election",
+        "title": "Declaration of Results",
+        "description": "The Returning Officer declares the candidate with the highest votes as the winner (First-Past-The-Post system). Results are published on the ECI website.",
+        "duration": "Same day as counting",
+        "details": [
+          "Winner gets a 'Certificate of Election'",
+          "Results are communicated to the ECI headquarters in real-time",
+          "Defeated candidates can challenge results through an Election Petition",
+          "Security deposit is forfeited if candidate gets less than 1/6th of total valid votes",
+          "Complete results are published on the ECI portal (results.eci.gov.in)"
+        ]
+      },
+      {
+        "id": "formation",
+        "step": 11,
+        "phase": "Post-Election",
+        "title": "Formation of Government",
+        "description": "The party or alliance that wins a majority of seats (272 out of 543 in Lok Sabha) is invited by the President to form the government. The leader is sworn in as Prime Minister.",
+        "duration": "Within days of result declaration",
+        "details": [
+          "President invites the majority party/coalition leader",
+          "If no party has clear majority, largest party gets first chance",
+          "PM and Council of Ministers are sworn in at Rashtrapati Bhavan",
+          "New government must prove majority on the floor of the House",
+          "First session of new Lok Sabha is convened within 30 days"
+        ]
+      }
+    ],
+    "state": [
+      {
+        "id": "s-announcement",
+        "step": 1,
+        "phase": "Pre-Election",
+        "title": "Announcement by State Election Commission",
+        "description": "The Election Commission announces the schedule for the State Legislative Assembly elections. Model Code of Conduct comes into effect for the state.",
+        "duration": "6-8 weeks before polling",
+        "details": [
+          "MCC effective immediately upon announcement",
+          "State government's policy announcements are frozen",
+          "Transfer of state officials begins"
+        ]
+      },
+      {
+        "id": "s-notification",
+        "step": 2,
+        "phase": "Pre-Election",
+        "title": "Notification and Electoral Roll Update",
+        "description": "Formal notification is issued for each Vidhan Sabha constituency. Electoral rolls are updated and finalized.",
+        "duration": "7 days before last date of nomination",
+        "details": [
+          "Published in the State Gazette",
+          "Electoral rolls finalized with latest additions/deletions",
+          "Returning Officers appointed for each assembly constituency"
+        ]
+      },
+      {
+        "id": "s-nomination",
+        "step": 3,
+        "phase": "Nomination",
+        "title": "Nomination Filing",
+        "description": "Candidates file their nominations with the Returning Officer. Security deposit for Vidhan Sabha is ₹10,000 (₹5,000 for SC/ST candidates).",
+        "duration": "1 week filing window",
+        "details": [
+          "Lower security deposit compared to Lok Sabha",
+          "Minimum age: 25 years",
+          "Candidate must be a registered voter",
+          "Party ticket allocation drives candidate selection"
+        ]
+      },
+      {
+        "id": "s-scrutiny",
+        "step": 4,
+        "phase": "Nomination",
+        "title": "Scrutiny and Withdrawal",
+        "description": "Nomination scrutiny followed by withdrawal period. Final list of candidates is prepared for ballot/EVM sequencing.",
+        "duration": "2-3 days total",
+        "details": [
+          "Same scrutiny process as general elections",
+          "Symbol allotment by the ECI",
+          "Final candidate list published"
+        ]
+      },
+      {
+        "id": "s-campaign",
+        "step": 5,
+        "phase": "Campaign",
+        "title": "Campaign and Silence Period",
+        "description": "Intensive campaigning followed by mandatory 48-hour silence period. Expenditure limit for Vidhan Sabha is ₹40 lakh (2024).",
+        "duration": "2-3 weeks campaign + 48 hours silence",
+        "details": [
+          "Campaign expenditure limit is lower than Lok Sabha",
+          "State-specific issues dominate the campaign",
+          "EC deploys observers and surveillance teams"
+        ]
+      },
+      {
+        "id": "s-polling",
+        "step": 6,
+        "phase": "Polling",
+        "title": "Polling Day",
+        "description": "Voters cast their votes using EVMs at designated polling stations. Process is identical to Lok Sabha elections at the booth level.",
+        "duration": "7 AM to 6 PM",
+        "details": [
+          "Same EVM and VVPAT process as general elections",
+          "Voter ID required for identification",
+          "NOTA option available"
+        ]
+      },
+      {
+        "id": "s-counting",
+        "step": 7,
+        "phase": "Post-Election",
+        "title": "Counting and Government Formation",
+        "description": "Votes are counted, results declared, and the party/coalition with a majority is invited by the Governor to form the state government.",
+        "duration": "1-2 days after polling",
+        "details": [
+          "Governor invites majority party leader as Chief Minister",
+          "Council of Ministers is sworn in",
+          "First session of new Assembly is convened"
+        ]
+      }
+    ],
+    "local": [
+      {
+        "id": "l-notification",
+        "step": 1,
+        "phase": "Pre-Election",
+        "title": "Notification by State Election Commission",
+        "description": "The State Election Commission issues notification for Panchayat or Municipal elections. Ward delimitation is finalized.",
+        "duration": "4-6 weeks before polling",
+        "details": [
+          "State Election Commission (separate from ECI) conducts these elections",
+          "Ward/constituency delimitation based on latest census",
+          "Reservation of seats for SC/ST/OBC and women is applied"
+        ]
+      },
+      {
+        "id": "l-nomination",
+        "step": 2,
+        "phase": "Nomination",
+        "title": "Nomination and Candidature",
+        "description": "Candidates file nominations for Panchayat (Sarpanch, Block, Zilla Parishad) or Municipal (Councillor, Mayor) positions.",
+        "duration": "1 week",
+        "details": [
+          "Lower security deposits than state/national elections",
+          "Minimum age and education requirements vary by state",
+          "Many candidates contest independently"
+        ]
+      },
+      {
+        "id": "l-campaign",
+        "step": 3,
+        "phase": "Campaign",
+        "title": "Local Campaigning",
+        "description": "Campaigns are typically grassroots level — door-to-door canvassing, community meetings, and local issue-based advocacy.",
+        "duration": "1-2 weeks",
+        "details": [
+          "Focus on local issues: water, roads, sanitation, development",
+          "Lower expenditure limits",
+          "Community and caste networks play a significant role"
+        ]
+      },
+      {
+        "id": "l-polling",
+        "step": 4,
+        "phase": "Polling",
+        "title": "Polling and Counting",
+        "description": "Voting happens via EVMs or ballot papers (depending on the state). Counting and results follow shortly after.",
+        "duration": "1 day polling, 1-2 days counting",
+        "details": [
+          "Some states still use ballot papers for local elections",
+          "Results impact local governance for 5 years",
+          "73rd and 74th Constitutional Amendments mandate regular elections"
+        ]
+      }
+    ]
+  },
+  "quiz": {
+    "questions": [
+      {
+        "id": "q1",
+        "question": "Who conducts the General Elections and State Assembly Elections in India?",
+        "options": ["President of India", "Election Commission of India", "Supreme Court of India", "Parliament of India"],
+        "correct": 1,
+        "explanation": "The Election Commission of India (ECI) is an autonomous constitutional body responsible for administering election processes in India at the national and state level. It was established on January 25, 1950.",
+        "category": "institutions",
+        "difficulty": "beginner"
+      },
+      {
+        "id": "q2",
+        "question": "What is the minimum age to vote in Indian elections?",
+        "options": ["16 years", "18 years", "21 years", "25 years"],
+        "correct": 1,
+        "explanation": "The 61st Amendment to the Constitution of India in 1989 lowered the voting age from 21 to 18 years. Every citizen of India who is 18 years or older on the qualifying date is eligible to vote.",
+        "category": "process",
+        "difficulty": "beginner"
+      },
+      {
+        "id": "q3",
+        "question": "What does EVM stand for?",
+        "options": ["Electronic Vote Machine", "Electronic Voting Machine", "Electoral Voting Mechanism", "Electronic Voter Management"],
+        "correct": 1,
+        "explanation": "EVM stands for Electronic Voting Machine. It is a portable device used to record votes in Indian elections. EVMs were first used in 1982 in the Kerala state assembly bypoll.",
+        "category": "technology",
+        "difficulty": "beginner"
+      },
+      {
+        "id": "q4",
+        "question": "What is NOTA in Indian elections?",
+        "options": ["A political party", "None of the Above — an option to reject all candidates", "A type of ballot paper", "National Organization for Transparent Administration"],
+        "correct": 1,
+        "explanation": "NOTA (None of the Above) was introduced by the Supreme Court of India in September 2013. It allows voters to express dissatisfaction with all candidates without revealing their identity. However, even if NOTA gets the majority, the candidate with the most votes wins.",
+        "category": "voting",
+        "difficulty": "beginner"
+      },
+      {
+        "id": "q5",
+        "question": "How many members are elected to the Lok Sabha?",
+        "options": ["245", "543", "552", "500"],
+        "correct": 1,
+        "explanation": "The Lok Sabha has a maximum strength of 552 members, of which 543 are elected directly. The remaining seats were earlier reserved for Anglo-Indian community nominations (discontinued after the 104th Amendment, 2020).",
+        "category": "constitutional",
+        "difficulty": "beginner"
+      },
+      {
+        "id": "q6",
+        "question": "What is VVPAT?",
+        "options": ["Voter Verification and Poll Audit Trail", "Voter Verifiable Paper Audit Trail", "Virtual Voting Paper Audit Technology", "Verified Voting and Paper Audit Trail"],
+        "correct": 1,
+        "explanation": "VVPAT (Voter Verifiable Paper Audit Trail) is a device attached to EVMs that prints a paper slip showing the symbol and name of the candidate voted for. The slip is visible to the voter for 7 seconds through a glass window, providing a verification mechanism.",
+        "category": "technology",
+        "difficulty": "intermediate"
+      },
+      {
+        "id": "q7",
+        "question": "Which article of the Indian Constitution establishes the Election Commission?",
+        "options": ["Article 280", "Article 324", "Article 356", "Article 370"],
+        "correct": 1,
+        "explanation": "Article 324 of the Indian Constitution vests the superintendence, direction, and control of all elections to Parliament, State Legislatures, and the offices of President and Vice-President in the Election Commission of India.",
+        "category": "constitutional",
+        "difficulty": "intermediate"
+      },
+      {
+        "id": "q8",
+        "question": "What is the Model Code of Conduct (MCC)?",
+        "options": [
+          "A law passed by Parliament for elections",
+          "A set of guidelines issued by ECI for political parties and candidates during elections",
+          "A code of conduct for election officers only",
+          "An international election standard"
+        ],
+        "correct": 1,
+        "explanation": "The Model Code of Conduct is a set of norms and guidelines issued by the ECI to regulate political parties and candidates during elections. Though not legally enforceable as a statute, the ECI enforces it using its constitutional powers under Article 324.",
+        "category": "process",
+        "difficulty": "intermediate"
+      },
+      {
+        "id": "q9",
+        "question": "What electoral system does India use for Lok Sabha elections?",
+        "options": ["Proportional Representation", "First-Past-The-Post (FPTP)", "Mixed Member Proportional", "Single Transferable Vote"],
+        "correct": 1,
+        "explanation": "India uses the First-Past-The-Post (FPTP) system where the candidate who receives the most votes in a constituency wins, regardless of whether they have a majority. This is also known as the 'simple plurality' system.",
+        "category": "process",
+        "difficulty": "intermediate"
+      },
+      {
+        "id": "q10",
+        "question": "When was the first General Election held in India?",
+        "options": ["1947-48", "1950-51", "1951-52", "1952-53"],
+        "correct": 2,
+        "explanation": "India's first general election was held from October 25, 1951 to February 21, 1952. It was the largest democratic exercise in the world at that time, with 17.3 crore eligible voters. Sukumar Sen was the first Chief Election Commissioner who oversaw this historic election.",
+        "category": "history",
+        "difficulty": "intermediate"
+      },
+      {
+        "id": "q11",
+        "question": "What is the maximum election expenditure limit for a Lok Sabha candidate (as of 2024)?",
+        "options": ["₹40 lakh", "₹70 lakh", "₹95 lakh", "₹1 crore"],
+        "correct": 2,
+        "explanation": "As per the ECI's revised notification in 2022, the maximum election expenditure limit for a Lok Sabha candidate is ₹95 lakh in larger states and ₹75 lakh in smaller states. For state assembly elections, the limit is ₹40 lakh in larger states.",
+        "category": "process",
+        "difficulty": "advanced"
+      },
+      {
+        "id": "q12",
+        "question": "What is the significance of the 73rd Constitutional Amendment?",
+        "options": [
+          "Right to Education",
+          "Lowered voting age to 18",
+          "Gave constitutional status to Panchayati Raj institutions",
+          "Established the National Human Rights Commission"
+        ],
+        "correct": 2,
+        "explanation": "The 73rd Constitutional Amendment Act of 1992 gave constitutional status to Panchayati Raj institutions to strengthen grassroots democracy. It mandated regular elections every 5 years, reservation of seats for SC/ST/Women, and gave financial powers to local bodies.",
+        "category": "constitutional",
+        "difficulty": "advanced"
+      },
+      {
+        "id": "q13",
+        "question": "How are Rajya Sabha members elected?",
+        "options": [
+          "Directly by the people through universal adult franchise",
+          "By elected members of State Legislative Assemblies through proportional representation with single transferable vote",
+          "Nominated by the President of India",
+          "By Members of Lok Sabha"
+        ],
+        "correct": 1,
+        "explanation": "Rajya Sabha members are elected by the elected members of State Legislative Assemblies (MLAs) using the system of proportional representation with a single transferable vote. Additionally, 12 members are nominated by the President for expertise in art, science, literature, or social service.",
+        "category": "constitutional",
+        "difficulty": "advanced"
+      },
+      {
+        "id": "q14",
+        "question": "What is the Anti-Defection Law?",
+        "options": [
+          "A law against election rigging",
+          "A law from the 52nd Amendment that disqualifies MPs/MLAs who defect from their party",
+          "A law against hate speech during elections",
+          "A law that prevents formation of new political parties"
+        ],
+        "correct": 1,
+        "explanation": "The Anti-Defection Law was added via the 52nd Constitutional Amendment Act (1985) as the Tenth Schedule. It disqualifies elected members who voluntarily give up party membership or vote against party whip. The Speaker/Chairman decides disqualification cases.",
+        "category": "constitutional",
+        "difficulty": "advanced"
+      },
+      {
+        "id": "q15",
+        "question": "What is the Representation of the People Act, 1951 primarily about?",
+        "options": [
+          "Providing reservation in government jobs",
+          "Regulating the actual conduct of elections and resolving election disputes",
+          "Providing the right to vote to all citizens",
+          "Establishing the Election Commission"
+        ],
+        "correct": 1,
+        "explanation": "The Representation of the People Act, 1951 provides for the conduct of elections to Parliament and State Legislatures, qualifications and disqualifications for membership, corrupt practices and election disputes, and registration of political parties.",
+        "category": "legal",
+        "difficulty": "advanced"
+      },
+      {
+        "id": "q16",
+        "question": "When did EVMs first replace ballot papers in an entire state election in India?",
+        "options": ["1998 in Delhi", "2001 in Tamil Nadu", "2004 in all states", "1989 in Goa"],
+        "correct": 2,
+        "explanation": "While EVMs were first used experimentally in 1982 in Kerala, the first complete state to use EVMs in all constituencies was Goa in 1999. By 2004 general elections, EVMs were used across all polling stations in India.",
+        "category": "history",
+        "difficulty": "advanced"
+      },
+      {
+        "id": "q17",
+        "question": "What is the 'indelible ink' used during voting made of?",
+        "options": ["Regular ink with dye", "Silver nitrate solution", "Carbon-based paint", "Mercury compound"],
+        "correct": 1,
+        "explanation": "The indelible ink used in Indian elections is manufactured by Mysore Paints and Varnish Limited and contains silver nitrate at about 7-25% concentration. It is applied to the voter's left index finger and remains visible for about 4-6 weeks, preventing duplicate voting.",
+        "category": "technology",
+        "difficulty": "intermediate"
+      },
+      {
+        "id": "q18",
+        "question": "What is a 'hung parliament'?",
+        "options": [
+          "A parliament where a no-confidence motion has passed",
+          "A parliament where no single party or coalition has a clear majority",
+          "A dissolved parliament",
+          "A parliament in recess"
+        ],
+        "correct": 1,
+        "explanation": "A hung parliament occurs when no single party or pre-election coalition wins enough seats (272 in Lok Sabha) to form a government on its own. In such cases, the President may invite the single largest party to prove its majority through post-election alliances.",
+        "category": "process",
+        "difficulty": "intermediate"
+      },
+      {
+        "id": "q19",
+        "question": "Who was the first Chief Election Commissioner of India?",
+        "options": ["T.N. Seshan", "Sukumar Sen", "K.V. Krishna Murthy", "S.P. Sen Verma"],
+        "correct": 1,
+        "explanation": "Sukumar Sen served as the first Chief Election Commissioner of India from March 21, 1950 to December 19, 1958. He successfully conducted India's first two general elections, which was a monumental task for a newly independent nation with widespread illiteracy.",
+        "category": "history",
+        "difficulty": "intermediate"
+      },
+      {
+        "id": "q20",
+        "question": "What is 'delimitation' in the context of Indian elections?",
+        "options": [
+          "The process of disqualifying candidates",
+          "The process of redrawing constituency boundaries based on the latest census data",
+          "The process of voter registration",
+          "The process of counting votes"
+        ],
+        "correct": 1,
+        "explanation": "Delimitation is the process of redrawing boundaries of Lok Sabha and State Assembly constituencies based on the latest Census data. This is done by an independent Delimitation Commission to ensure fair representation based on population changes.",
+        "category": "process",
+        "difficulty": "advanced"
+      }
+    ]
+  },
+  "glossary": [
+    {
+      "term": "Election Commission of India (ECI)",
+      "abbreviation": "ECI",
+      "definition": "An autonomous constitutional body responsible for administering election processes in India. Established on January 25, 1950, under Article 324 of the Constitution.",
+      "category": "institutions",
+      "extra": "The ECI currently consists of the Chief Election Commissioner and two Election Commissioners. They enjoy security of tenure and can only be removed through impeachment."
+    },
+    {
+      "term": "Electronic Voting Machine",
+      "abbreviation": "EVM",
+      "definition": "A portable electronic device used to record votes in Indian elections. It consists of a Control Unit and a Balloting Unit connected by a 5-meter cable.",
+      "category": "technology",
+      "extra": "EVMs run on a single 7.5-volt battery, can store up to 2,000 votes, and cannot be connected to any network, making them tamper-resistant."
+    },
+    {
+      "term": "Voter Verifiable Paper Audit Trail",
+      "abbreviation": "VVPAT",
+      "definition": "A device attached to EVMs that produces a paper slip showing the name and symbol of the candidate voted for, visible through a glass window for 7 seconds.",
+      "category": "technology",
+      "extra": "Made mandatory in all elections by 2019 after a 2013 Supreme Court directive. VVPAT slips of 5 random polling stations per constituency are physically verified against EVM counts."
+    },
+    {
+      "term": "None of the Above",
+      "abbreviation": "NOTA",
+      "definition": "An option on the EVM allowing voters to officially reject all contesting candidates without compromising ballot secrecy. Introduced by Supreme Court order in 2013.",
+      "category": "voting",
+      "extra": "Even if NOTA receives the highest votes, the candidate with the most votes among the contestants is declared the winner under current rules."
+    },
+    {
+      "term": "First-Past-The-Post System",
+      "abbreviation": "FPTP",
+      "definition": "An electoral system where the candidate who receives the most votes in a constituency wins, regardless of whether they have a majority. Used in Lok Sabha and Vidhan Sabha elections.",
+      "category": "process",
+      "extra": "Critics argue FPTP can lead to 'wasted votes' and winner-takes-all outcomes. Alternatives like proportional representation are used in Rajya Sabha elections."
+    },
+    {
+      "term": "Model Code of Conduct",
+      "abbreviation": "MCC",
+      "definition": "A set of guidelines issued by the ECI for political parties and candidates to follow during elections, ensuring free and fair elections.",
+      "category": "legal",
+      "extra": "The MCC comes into effect immediately upon announcement of election schedule. It covers areas like speeches, polling day conduct, government machinery usage, and election manifestos."
+    },
+    {
+      "term": "Constituency",
+      "abbreviation": "",
+      "definition": "A defined geographical area from which voters elect their representative. India has 543 Lok Sabha constituencies and varying numbers of State Assembly constituencies.",
+      "category": "process",
+      "extra": "Constituency boundaries are redrawn periodically through delimitation. Each constituency elects one representative in India's single-member constituency system."
+    },
+    {
+      "term": "Electoral Roll",
+      "abbreviation": "",
+      "definition": "The official list of all eligible voters in a constituency. Only persons whose names appear on the electoral roll can vote. Updated continuously with quarterly revisions.",
+      "category": "process",
+      "extra": "Citizens can register through the National Voter Service Portal (NVSP) or by submitting Form 6 to the Electoral Registration Officer. Photo voter slips help in identification."
+    },
+    {
+      "term": "Returning Officer",
+      "abbreviation": "RO",
+      "definition": "A senior government official appointed by the ECI to manage the election process in each constituency — from nomination filing to result declaration.",
+      "category": "institutions",
+      "extra": "The RO handles scrutiny of nominations, conducts the poll, oversees counting, and officially declares the result for their constituency."
+    },
+    {
+      "term": "Electors Photo Identity Card",
+      "abbreviation": "EPIC",
+      "definition": "The official Voter ID card issued by the ECI containing the voter's photograph, name, address, and unique EPIC number. Serves as the primary voter identification.",
+      "category": "voting",
+      "extra": "While EPIC is the primary ID, voters can also use 12 other approved IDs including Aadhaar, Passport, Driving License, PAN Card, etc."
+    },
+    {
+      "term": "Delimitation Commission",
+      "abbreviation": "",
+      "definition": "An independent body that redraws the boundaries of Lok Sabha and Assembly constituencies based on the latest Census data to ensure equal representation.",
+      "category": "institutions",
+      "extra": "The Commission is headed by a retired Supreme Court judge. The last delimitation exercise was conducted in 2002-2008 based on the 2001 Census."
+    },
+    {
+      "term": "Anti-Defection Law",
+      "abbreviation": "",
+      "definition": "Part of the Tenth Schedule added by the 52nd Amendment (1985), it disqualifies elected legislators who defect from their party or vote against party directives.",
+      "category": "legal",
+      "extra": "Exemptions exist for mergers (minimum 2/3 of party legislators must agree). The presiding officer (Speaker/Chairman) decides on disqualification petitions."
+    },
+    {
+      "term": "Representation of the People Act",
+      "abbreviation": "RPA",
+      "definition": "Two acts (1950 and 1951) that form the legal framework for elections — covering voter eligibility, candidate qualifications, election conduct, corrupt practices, and dispute resolution.",
+      "category": "legal",
+      "extra": "The 1950 Act deals with voter qualification and electoral roll preparation. The 1951 Act covers election conduct, qualifications/disqualifications, and election offenses."
+    },
+    {
+      "term": "Ballot Paper",
+      "abbreviation": "",
+      "definition": "A physical paper on which voters mark their choice. While largely replaced by EVMs in national and state elections, ballot papers are still used for Rajya Sabha, Presidential, and some local elections.",
+      "category": "voting",
+      "extra": "Ballot papers in India were first used in 1951-52. They carry the names and symbols of all candidates in the constituency."
+    },
+    {
+      "term": "By-election",
+      "abbreviation": "",
+      "definition": "An election held to fill a vacancy in a constituency that arises between general elections due to death, resignation, or disqualification of the sitting member.",
+      "category": "process",
+      "extra": "By-elections must be held within 6 months of a vacancy arising, unless the remaining term of the House is less than one year."
+    },
+    {
+      "term": "Postal Ballot",
+      "abbreviation": "",
+      "definition": "A system allowing certain categories of voters (service voters, senior citizens 80+, PwDs, essential service workers, COVID patients) to vote by mail without visiting the polling station.",
+      "category": "voting",
+      "extra": "The Electronically Transmitted Postal Ballot System (ETPBS) allows service voters to receive ballots electronically and return them by post."
+    },
+    {
+      "term": "National Voter Service Portal",
+      "abbreviation": "NVSP",
+      "definition": "An online platform (voters.eci.gov.in) where citizens can register as voters, check their electoral roll status, find polling booth location, and file various election-related applications.",
+      "category": "institutions",
+      "extra": "Key services include new voter registration (Form 6), migration (Form 6A), corrections (Form 8), and searching for name on voter list."
+    },
+    {
+      "term": "Booth Level Officer",
+      "abbreviation": "BLO",
+      "definition": "A local government official responsible for maintaining and updating the electoral roll at the polling station level, conducting voter awareness, and assisting voters.",
+      "category": "institutions",
+      "extra": "BLOs are the ground-level functionaries of the election machinery. They conduct door-to-door verification of voters and help in the continuous updation of electoral rolls."
+    }
+  ],
+  "checklist": [
+    {
+      "id": "check-age",
+      "title": "Verify Your Age Eligibility",
+      "description": "You must be at least 18 years old on the qualifying date (January 1 of the year of electoral roll revision) to be eligible to vote.",
+      "icon": "🎂",
+      "link": "",
+      "linkText": ""
+    },
+    {
+      "id": "check-citizenship",
+      "title": "Confirm Indian Citizenship",
+      "description": "Only Indian citizens are eligible to vote. Ensure you have valid proof of citizenship such as birth certificate, passport, or Aadhaar card.",
+      "icon": "🇮🇳",
+      "link": "",
+      "linkText": ""
+    },
+    {
+      "id": "check-register",
+      "title": "Register on Electoral Roll",
+      "description": "Register as a voter by submitting Form 6 online through the National Voter Service Portal or offline through your local Electoral Registration Officer.",
+      "icon": "📝",
+      "link": "https://voters.eci.gov.in/",
+      "linkText": "Register at NVSP →"
+    },
+    {
+      "id": "check-voterid",
+      "title": "Get Your Voter ID (EPIC)",
+      "description": "Obtain your Electors Photo Identity Card (EPIC) — your official Voter ID. You will receive it after successful registration.",
+      "icon": "🪪",
+      "link": "https://voters.eci.gov.in/",
+      "linkText": "Track Voter ID Status →"
+    },
+    {
+      "id": "check-roll",
+      "title": "Check Your Name on Electoral Roll",
+      "description": "Before every election, verify that your name appears correctly on the electoral roll. Search by name or EPIC number on the NVSP portal.",
+      "icon": "🔍",
+      "link": "https://electoralsearch.eci.gov.in/",
+      "linkText": "Search Electoral Roll →"
+    },
+    {
+      "id": "check-booth",
+      "title": "Find Your Polling Booth",
+      "description": "Locate your assigned polling station before election day. Check your Voter Information Slip or search online through the ECI portal.",
+      "icon": "📍",
+      "link": "https://voters.eci.gov.in/",
+      "linkText": "Find Polling Station →"
+    },
+    {
+      "id": "check-documents",
+      "title": "Prepare Valid ID Documents",
+      "description": "Carry your EPIC (Voter ID) on polling day. Alternative IDs accepted: Aadhaar, Passport, Driving License, PAN Card, or any of the 12 approved documents.",
+      "icon": "📄",
+      "link": "",
+      "linkText": ""
+    },
+    {
+      "id": "check-evm",
+      "title": "Learn How to Use EVM & VVPAT",
+      "description": "Familiarize yourself with the EVM voting process: find your candidate, press the blue button next to their name/symbol, and verify your vote on the VVPAT slip.",
+      "icon": "🖥️",
+      "link": "",
+      "linkText": ""
+    },
+    {
+      "id": "check-rights",
+      "title": "Know Your Voter Rights",
+      "description": "You have the right to: vote in secrecy, ask for a new ballot if spoiled, report irregularities, use NOTA, and get paid leave on polling day (in many states).",
+      "icon": "⚖️",
+      "link": "",
+      "linkText": ""
+    },
+    {
+      "id": "check-report",
+      "title": "Know How to Report Violations",
+      "description": "Report election violations using the cVIGIL app, the ECI's toll-free number 1950, or directly to the Returning Officer. Keep evidence if possible.",
+      "icon": "📢",
+      "link": "",
+      "linkText": ""
+    }
+  ]
+}
