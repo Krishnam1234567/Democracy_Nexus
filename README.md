@@ -112,8 +112,4 @@ Generate an optimized build suitable for deployment:
 npm run build
 ```
 
----
 
-## 🏆 Credits
-
-Designed and developed by **[kriashnam](https://github.com/kriashnam)**.
