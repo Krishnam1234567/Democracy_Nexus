@@ -1,5 +1,6 @@
 <div align="center">
-  <h1>🗳️ Democracy Nexus</h1>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=250&section=header&text=🗳️%20Democracy%20Nexus&fontSize=50&fontColor=ffffff&animation=fadeIn" alt="Democracy Nexus Banner" width="100%"/>
+
   <p><strong>An Intelligent, Interactive Guide to the Indian Electoral Process</strong></p>
 
   <!-- Badges -->
@@ -14,9 +15,9 @@
 
 ## 📖 Overview
 
-**Democracy Nexus** (formerly *Democracy Dashboard*) is a highly interactive, accessible, and responsive Single Page Application (SPA) designed to demystify the Indian election process. It empowers citizens with knowledge about voting steps, electoral timelines, and democratic frameworks through gamified learning and AI-powered assistance.
+**Democracy Nexus** is a highly interactive, accessible, and responsive Single Page Application (SPA) designed to demystify the Indian election process. It empowers citizens with knowledge about voting steps, electoral timelines, and democratic frameworks through gamified learning and AI-powered assistance.
 
-This project was specifically designed to tackle **Challenge 2: Election Process Education**, serving as an interactive assistant that breaks down complex timelines into easy-to-follow, digestible formats.
+This project serves as an interactive assistant that breaks down complex timelines into easy-to-follow, digestible formats.
 
 ---
 
@@ -29,7 +30,7 @@ This project was specifically designed to tackle **Challenge 2: Election Process
 | 🧠 **Knowledge Quiz** | A gamified testing module with categorized questions. Scores are tracked and synced via **Firebase Firestore** for a global leaderboard. |
 | 📋 **Voter Readiness Checklist** | A personalized action plan that calculates age eligibility and guides new voters from registration to polling day. |
 | 📚 **Smart Glossary** | An interactive, searchable dictionary designed to simplify complex electoral terminology (EVM, VVPAT, NOTA, MCC, etc.). |
-| 📱 **PWA Capabilities** | fully installable as a Progressive Web App, complete with offline support via Service Workers for on-the-go learning. |
+| 📱 **PWA Capabilities** | Fully installable as a Progressive Web App, complete with offline support via Service Workers for on-the-go learning. |
 
 ---
 
@@ -68,8 +69,8 @@ We believe democracy should be accessible to everyone, safely.
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/kriashnam/democracy-nexus.git
-   cd democracy-nexus
+   git clone https://github.com/kriashnam/Democracy_Nexus.git
+   cd Democracy_Nexus
    ```
 
 2. **Install dependencies**
@@ -113,7 +114,6 @@ npm run build
 
 ---
 
-## ⚖️ License & Credits
+## 🏆 Credits
 
-Designed and developed by **[kriashnam](https://github.com/kriashnam)**.  
-Released under the MIT License.
+Designed and developed by **[kriashnam](https://github.com/kriashnam)**.

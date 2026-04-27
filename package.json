@@ -1,5 +1,5 @@
 {
-  "name": "democracy-dashboard",
+  "name": "democracy-nexus",
   "private": true,
   "version": "1.0.0",
   "description": "Interactive Election Process Education Assistant — helps users understand the election process, timelines, and steps in an interactive and easy-to-follow way",
@@ -42,6 +42,5 @@
     "gemini-ai",
     "interactive"
   ],
-  "author": "kriashnam",
-  "license": "MIT"
+  "author": "kriashnam"
 }
