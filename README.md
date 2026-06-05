@@ -13,7 +13,7 @@
   
 <br />
 
-## 📖 Overview\
+## 📖 Overview\/
 
 **Democracy Nexus** is a highly interactive, accessible, and responsive Single Page Application (SPA) designed to demystify the Indian election process. It empowers citizens with knowledge about voting steps, electoral timelines, and democratic frameworks through gamified learning and AI-powered assistance.
 
