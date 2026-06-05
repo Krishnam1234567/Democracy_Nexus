@@ -10,10 +10,10 @@
   <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" alt="Firebase" />
   <img src="https://img.shields.io/badge/Gemini_AI-8E75B2?style=for-the-badge&logo=google&logoColor=white" alt="Google Gemini" />
 </div>
-
+  
 <br />
 
-## 📖 Overview
+## 📖 Overview\
 
 **Democracy Nexus** is a highly interactive, accessible, and responsive Single Page Application (SPA) designed to demystify the Indian election process. It empowers citizens with knowledge about voting steps, electoral timelines, and democratic frameworks through gamified learning and AI-powered assistance.
 
